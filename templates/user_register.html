@@ -14,10 +14,42 @@
         {{end}}
     </div>
     <div class="form-group">
+        <label>Email</label>
+        <input name="email" type="text" class="form-control {{with .Form.Errors.Email}}is-invalid{{end}}"
+            placeholder="Enter your e-mail address" value="{{with .Form.Email}}{{.}}{{end}}">
+        {{with .Form.Errors.Email}}
+        <div class="invalid-feedback">{{.}}</div>
+        {{end}}
+    </div>
+    <div class="form-group">
         <label>Password</label>
         <input name="password" type="password" class="form-control {{with .Form.Errors.Password}}is-invalid{{end}}"
             placeholder="Create a password" value="{{with .Form.Password}}{{.}}{{end}}">
         {{with .Form.Errors.Password}}
+        <div class="invalid-feedback">{{.}}</div>
+        {{end}}
+    </div>
+    <div class="form-group">
+        <label>Name</label>
+        <input name="name" type="text" class="form-control {{with .Form.Errors.Name}}is-invalid{{end}}"
+            placeholder="Enter your name" value="{{with .Form.Name}}{{.}}{{end}}">
+        {{with .Form.Errors.Name}}
+        <div class="invalid-feedback">{{.}}</div>
+        {{end}}
+    </div>
+    <div class="form-group">
+        <label>Surname</label>
+        <input name="surname" type="text" class="form-control {{with .Form.Errors.Surname}}is-invalid{{end}}"
+            placeholder="Enter your surname" value="{{with .Form.Surname}}{{.}}{{end}}">
+        {{with .Form.Errors.Surname}}
+        <div class="invalid-feedback">{{.}}</div>
+        {{end}}
+    </div>
+    <div class="form-group">
+        <label>City</label>
+        <input name="cityname" type="text" class="form-control {{with .Form.Errors.CityName}}is-invalid{{end}}"
+            placeholder="Enter the city you're located at" value="{{with .Form.CityName}}{{.}}{{end}}">
+        {{with .Form.Errors.CityName}}
         <div class="invalid-feedback">{{.}}</div>
         {{end}}
     </div>
